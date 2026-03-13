@@ -1,13 +1,588 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-2026</title>
+    <title>Portfolio 2026</title>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div class="pageShell">
+      <!-- Sidebar -->
+      <aside class="socialSidebar" aria-label="Kontaktlänkar">
+        <nav class="socialNav" aria-label="Sociala länkar">
+          <ul class="socialList">
+            <li class="socialItem socialItemMenu">
+              <button
+                id="menuButton"
+                class="menuButton"
+                type="button"
+                aria-label="Öppna meny"
+                aria-expanded="false"
+                aria-controls="siteMenu"
+              >
+                <svg
+                  width="25"
+                  height="19"
+                  viewBox="0 0 27 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M1 1H26M1 9.5H26M1 18H26"
+                    stroke="#FFFFFE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+
+            <li class="socialItem">
+              <a
+                href="mailto:louise.sverkstrom@gmail.com"
+                class="socialLink"
+                aria-label="Skicka e-post till Louise Sverkström"
+              >
+                <svg
+                  width="27"
+                  height="22"
+                  viewBox="0 0 27 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M1 5.28571L11.9583 12.8C12.4148 13.1133 12.9513 13.2804 13.5 13.2804C14.0487 13.2804 14.5852 13.1133 15.0417 12.8L26 5.28571M3.77778 21H23.2222C23.9589 21 24.6655 20.699 25.1864 20.1632C25.7073 19.6273 26 18.9006 26 18.1429V3.85714C26 3.09938 25.7073 2.37266 25.1864 1.83684C24.6655 1.30102 23.9589 1 23.2222 1H3.77778C3.04107 1 2.33453 1.30102 1.81359 1.83684C1.29266 2.37266 1 3.09938 1 3.85714V18.1429C1 18.9006 1.29266 19.6273 1.81359 20.1632C2.33453 20.699 3.04107 21 3.77778 21Z"
+                    stroke="#FFFFFE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="socialItem">
+              <a
+                href="https://github.com/LolloLicense"
+                class="socialLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Besök Louise Sverkströms GitHub-profil"
+              >
+                <svg
+                  width="25"
+                  height="26"
+                  viewBox="0 0 25 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M8.83597 22.0638C8.83597 23.0999 8.84788 24.0909 8.85502 24.7061C8.85688 24.8547 8.90622 24.999 8.99622 25.1192C9.08622 25.2393 9.21243 25.3293 9.35739 25.3768C11.8312 26.17 14.4966 26.207 16.993 25.482L17.3406 25.3814C17.5043 25.3339 17.6479 25.2365 17.7504 25.1037C17.8528 24.9709 17.9086 24.8096 17.9096 24.6437C17.9156 23.7961 17.9299 22.3113 17.9299 20.5618C17.9299 18.9753 17.362 17.96 16.7025 17.4315C20.7489 17.0083 25 15.5698 25 9.07462C25 7.21291 24.2952 5.70966 23.1357 4.52556C23.3179 4.10234 23.9548 2.36782 22.9536 0.041252C22.9536 0.041252 21.4298 -0.424755 17.9525 1.77577C16.4687 1.39375 14.9399 1.20171 13.4049 1.20454C11.8597 1.20454 10.3133 1.39533 8.85859 1.77577C5.38126 -0.405098 3.85748 0.041252 3.85748 0.041252C2.85749 2.36782 3.4932 4.10234 3.67534 4.52556C2.46166 5.74442 1.79178 7.37902 1.81108 9.07462C1.81108 15.5478 6.03959 17.0072 10.086 17.4315C9.56334 17.8548 9.08597 18.5948 8.92764 19.6945C7.88122 20.1385 5.26698 20.8578 3.6301 18.2988C3.28963 17.79 2.26584 16.5423 0.833718 16.5643C-0.690068 16.5851 0.219442 17.3679 0.857527 17.6859C1.62894 18.0872 2.51583 19.5893 2.72059 20.0761C3.08487 21.0278 4.267 22.8467 8.83597 22.065"
+                    fill="#FFFFFE"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="socialItem">
+              <a
+                href="https://www.linkedin.com/in/louise-sverkstr%C3%B6m-208634271/"
+                class="socialLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Besök Louise Sverkströms LinkedIn-profil"
+              >
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 2.08864C0.000601582 1.53488 0.220847 1.00398 0.612412 0.612415C1.00398 0.22085 1.53488 0.000604367 2.08864 2.78445e-06H22.9091C23.1836 -0.00044557 23.4555 0.0532561 23.7093 0.158033C23.963 0.26281 24.1936 0.416605 24.3878 0.610612C24.582 0.804619 24.736 1.03503 24.8411 1.28865C24.9462 1.54227 25.0001 1.81412 25 2.08864V22.9091C25 23.4634 24.7799 23.9951 24.388 24.3872C23.9961 24.7793 23.4646 24.9997 22.9102 25H2.08864C1.53468 24.9994 1.00361 24.779 0.612011 24.3872C0.220413 23.9954 0.000300734 23.4642 0 22.9102V2.08864ZM9.89545 9.53182H13.2807V11.2318C13.7693 10.2545 15.0193 9.375 16.8977 9.375C20.4989 9.375 21.3523 11.3216 21.3523 14.8932V21.5091H17.708V15.7068C17.708 13.6727 17.2193 12.525 15.9784 12.525C14.2568 12.525 13.5409 13.7625 13.5409 15.7068V21.5091H9.89545V9.53182ZM3.64545 21.3534H7.29091V9.375H3.64545V21.3534ZM7.8125 5.46818C7.81937 5.78031 7.76383 6.09067 7.64914 6.38104C7.53444 6.67141 7.3629 6.93595 7.14458 7.15913C6.92626 7.38231 6.66557 7.55963 6.37779 7.68069C6.09001 7.80175 5.78095 7.86411 5.46875 7.86411C5.15655 7.86411 4.84749 7.80175 4.55971 7.68069C4.27193 7.55963 4.01124 7.38231 3.79292 7.15913C3.5746 6.93595 3.40306 6.67141 3.28836 6.38104C3.17367 6.09067 3.11813 5.78031 3.125 5.46818C3.13849 4.85552 3.39135 4.27249 3.82942 3.84396C4.26748 3.41544 4.85594 3.17548 5.46875 3.17548C6.08156 3.17548 6.67002 3.41544 7.10808 3.84396C7.54615 4.27249 7.79901 4.85552 7.8125 5.46818Z"
+                    fill="#FFFFFE"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <div class="pageContent">
+        <header class="siteHeader">
+          <nav id="siteMenu" class="siteMenu" aria-label="Huvudmeny">
+            <ul class="menuList">
+              <li class="menuItem">
+                <a href="#caseSection" class="menuLink">Case</a>
+              </li>
+              <li class="menuItem">
+                <a href="#skillsSection" class="menuLink">Skills</a>
+              </li>
+              <li class="menuItem">
+                <a href="#currentInspoSection" class="menuLink"
+                  >Current inspo</a
+                >
+              </li>
+              <li class="menuItem">
+                <a href="#contactSection" class="menuLink">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="mainContent">
+          <!-- Hero -->
+          <section class="heroSection" aria-labelledby="heroHeading">
+            <div class="heroTitle">
+              <h1 id="heroHeading" class="firstName">Louise</h1>
+              <p class="lastName">Sverkström</p>
+            </div>
+
+            <div class="cvContent">
+              <button
+                id="openCvBtn"
+                class="cvBtn"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="cvDialog"
+              >
+                <svg
+                  viewBox="0 0 91 92"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M13.0389 0.858605C12.2996 0.867613 11.5693 1.02215 10.8897 1.31339C10.2101 1.60464 9.59459 2.02688 9.07819 2.55602C8.56179 3.08515 8.15467 3.71082 7.88007 4.3973C7.60548 5.08378 7.46877 5.81761 7.47778 6.55691C7.48679 7.29622 7.64133 8.02651 7.93257 8.70609C8.22381 9.38567 8.64606 10.0012 9.1752 10.5176C9.70433 11.034 10.33 11.4412 11.0165 11.7158C11.703 11.9903 12.4368 12.127 13.1761 12.118L71.5389 11.4074L1.62409 82.191C0.575003 83.2531 -0.00918619 84.6885 3.18425e-05 86.1813C0.00924987 87.6742 0.61112 89.1022 1.67324 90.1513C2.73536 91.2004 4.17073 91.7846 5.66358 91.7753C7.15642 91.7661 8.58446 91.1643 9.63355 90.1021L79.5404 19.3266L79.5545 77.6817C79.5795 79.1584 80.1839 80.566 81.2373 81.6011C82.2906 82.6363 83.7086 83.216 85.1855 83.2152C86.6623 83.2144 88.0797 82.6333 89.132 81.5971C90.1843 80.5608 90.7873 79.1526 90.8108 77.6759L90.8005 7.03749C90.8007 6.10595 90.6159 5.18363 90.2568 4.32407C89.8978 3.4645 89.3716 2.68479 88.7088 2.03017C88.0461 1.37555 87.2599 0.859044 86.396 0.510631C85.5321 0.162217 84.6075 -0.0111677 83.6761 0.00052237L13.0389 0.858605Z"
+                    fill="#F25832"
+                  />
+                </svg>
+                <span class="visuallyHidden">Öppna CV</span>
+              </button>
+
+              <h2 class="sectionTitle">CV</h2>
+            </div>
+          </section>
+
+          <!-- Case -->
+          <section
+            id="caseSection"
+            class="caseSection"
+            aria-labelledby="caseHeading"
+          >
+            <h2 id="caseHeading" class="sectionTitle">Case</h2>
+
+            <div class="swiper">
+              <div class="swiperWrapper">
+                <div class="swiperSlide">Slide 1</div>
+                <div class="swiperSlide">Slide 2</div>
+                <div class="swiperSlide">Slide 3</div>
+              </div>
+
+              <div class="swiperPagination"></div>
+              <div class="swiperButtonPrev"></div>
+              <div class="swiperButtonNext"></div>
+              <div class="swiperScrollbar"></div>
+            </div>
+          </section>
+
+          <!-- Skills -->
+          <section
+            id="skillsSection"
+            class="skillsSection"
+            aria-labelledby="skillsHeading"
+          >
+            <h2 id="skillsHeading" class="sectionTitle">Skills</h2>
+
+            <div class="skillsGrade">
+              <div class="gradeScale">
+                <h3 class="gradeName">Figma</h3>
+                <div
+                  class="gradeLevel level1"
+                  role="progressbar"
+                  aria-label="Figma"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">HTML | CSS | Tailwind</h3>
+                <div
+                  class="gradeLevel level2"
+                  role="progressbar"
+                  aria-label="HTML, CSS och Tailwind"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">SEO</h3>
+                <div
+                  class="gradeLevel level3"
+                  role="progressbar"
+                  aria-label="SEO"
+                  aria-valuenow="65"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">Git | GitHub</h3>
+                <div
+                  class="gradeLevel level4"
+                  role="progressbar"
+                  aria-label="Git och GitHub"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">UX | UI</h3>
+                <div
+                  class="gradeLevel level5"
+                  role="progressbar"
+                  aria-label="UX och UI"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">Branding</h3>
+                <div
+                  class="gradeLevel level6"
+                  role="progressbar"
+                  aria-label="Branding och grafiska profiler"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+
+                <h3 class="gradeName">Adobe CC</h3>
+                <div
+                  class="gradeLevel level7"
+                  role="progressbar"
+                  aria-label="Adobe Creative Cloud"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Current inspo -->
+          <section
+            id="currentInspoSection"
+            class="currentInspoSection"
+            aria-labelledby="currentInspoHeading"
+          >
+            <h2 id="currentInspoHeading" class="sectionTitle">Current inspo</h2>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contactSection" class="siteFooter">
+          <div class="siteFooterContent">
+            <button
+              type="button"
+              id="contactButton"
+              class="button contactButton"
+            >
+              Kontakta mig
+            </button>
+          </div>
+
+          <p class="copyright">
+            © 2026 Louise Sverkström — skapad med kaffe, kod och kreativitet.
+          </p>
+        </footer>
+      </div>
+
+      <!-- CV dialog -->
+      <dialog id="cvDialog" class="cvDialog" aria-labelledby="cvDialogTitle">
+        <div class="cvDialogInner">
+          <div class="cvContainer">
+            <header class="cvHeader">
+              <div class="cvHeaderTop">
+                <h2 id="cvDialogTitle" class="cvDialogTitle">CV</h2>
+
+                <button
+                  id="closeCvButton"
+                  class="closeDialogButton"
+                  type="button"
+                  aria-label="Stäng CV"
+                >
+                  Stäng
+                </button>
+              </div>
+
+              <div class="cvHeaderContent">
+                <figure class="cvImage">
+                  <img
+                    src="assets/images/imageCV.jpg"
+                    width="830"
+                    height="612"
+                    loading="lazy"
+                    alt="Svartvit porträttbild av Louise Sverkström, en blond kvinna som ler stort"
+                  />
+                </figure>
+
+                <div class="cvIntro">
+                  <p class="cvDescription">
+                    Creative Frontend Developer & Copywriter
+                  </p>
+                  <h3 class="cvName">Louise Sverkström</h3>
+                </div>
+              </div>
+            </header>
+
+            <div class="cvMainContent">
+              <!-- Left column -->
+              <div class="cvContentLeft">
+                <section
+                  class="workExperienceSection"
+                  aria-labelledby="workExperienceHeading"
+                >
+                  <h3 id="workExperienceHeading" class="cvSectionTitle">
+                    Arbetslivserfarenhet
+                  </h3>
+
+                  <div class="workCards">
+                    <article class="workCard">
+                      <h4 class="cvContentTitle">Receptionist</h4>
+                      <p class="experienceWorkplace">
+                        Björholmens Hotell & Restaurang
+                      </p>
+                      <p class="workDates">Maj 2025 – September 2025</p>
+                    </article>
+
+                    <article class="workCard">
+                      <h4 class="cvContentTitle">
+                        Webbredaktör & Projektledare
+                      </h4>
+                      <p class="experienceWorkplace">
+                        Visit Västkusten / fd. Södra Bohuslän Turism
+                      </p>
+                      <p class="workDates">Mars 2022 – Augusti 2024</p>
+                    </article>
+
+                    <article class="workCard">
+                      <h4 class="cvContentTitle">Kökschef</h4>
+                      <p class="experienceWorkplace">
+                        Björholmens Hotell & Restaurang
+                      </p>
+                      <p class="workDates">Januari 2019 – Augusti 2021</p>
+                    </article>
+
+                    <article class="workCard">
+                      <h4 class="cvContentTitle">Souschef & Kock</h4>
+                      <p class="experienceWorkplace">
+                        Bergabo Hotell, Gamla Brogatan, Happy Belly m.fl.
+                      </p>
+                      <p class="workDates">2008 – 2019</p>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="aboutSection" aria-labelledby="aboutHeading">
+                  <h3 id="aboutHeading" class="cvSectionTitle">Om mig</h3>
+                  <p class="aboutText">
+                    Positiv och serviceinriktad 37-åring med många års
+                    erfarenhet inom besöksnäringen där jag har utvecklat en
+                    stark känsla för kundbemötande och effektiv problemlösning.
+                    Min bakgrund förenar kreativitet, kommunikation och
+                    struktur. Van att organisera, prioritera och paketera — vare
+                    sig det handlar om publika evenemang, redaktionellt innehåll
+                    eller digitala projekt. Jag är nyfiken, lösningsorienterad
+                    och inte rädd för att kavla upp ärmarna när det behövs.
+                  </p>
+                </section>
+
+                <section
+                  class="extraInfoSection"
+                  aria-labelledby="extraInfoHeading"
+                >
+                  <h3 id="extraInfoHeading" class="cvSectionTitle">
+                    Övrig info
+                  </h3>
+                  <p class="extraInfoText">Körkort: B</p>
+                  <p class="extraInfoText">Språk: Svenska & Engelska</p>
+                  <p class="referencesText">
+                    Referenser? Självklart — kontakta mig så skickar jag.
+                  </p>
+                </section>
+              </div>
+
+              <!-- Right column -->
+              <div class="cvContentRight">
+                <section
+                  class="educationSection"
+                  aria-labelledby="educationHeading"
+                >
+                  <h3 id="educationHeading" class="cvSectionTitle">
+                    Utbildning
+                  </h3>
+
+                  <article class="educationCard">
+                    <p class="educationDates">2025 – 2027</p>
+                    <h4 class="educationTitle">
+                      Medieinstitutet — Front End Developer
+                    </h4>
+                    <ul class="educationDetails">
+                      <li>HTML, CSS, Sass, Tailwind, JavaScript, React</li>
+                      <li>UX/UI-design</li>
+                      <li>Responsiv design</li>
+                      <li>API-utveckling</li>
+                    </ul>
+                  </article>
+
+                  <article class="educationCard">
+                    <p class="educationDates">2024 – 2025</p>
+                    <h4 class="educationTitle">
+                      Karlskoga folkhögskola — Webbdesign & Webbutveckling
+                    </h4>
+                    <ul class="educationDetails">
+                      <li>
+                        Frontendutveckling med HTML, CSS, Tailwind & JavaScript
+                      </li>
+                      <li>UX/UI-design i Figma med fokus på tillgänglighet</li>
+                      <li>Grafisk produktion</li>
+                    </ul>
+                  </article>
+
+                  <article class="educationCard">
+                    <p class="educationDates">Hösten 2022</p>
+                    <h4 class="educationTitle">
+                      Berghs School of Communication — Digital Copywriting
+                    </h4>
+                    <ul class="educationDetails">
+                      <li>Digital copy och tonalitet för olika kanaler</li>
+                      <li>SEO, UX-copy och innehållsstrategi</li>
+                      <li>
+                        Skrivande för blogg, sociala medier, nyhetsbrev och webb
+                      </li>
+                    </ul>
+                  </article>
+
+                  <article class="educationCard">
+                    <p class="educationDates">2004 – 2007</p>
+                    <h4 class="educationTitle">
+                      Uddevalla Gymnasieskola — Mediaprogrammet
+                    </h4>
+                  </article>
+                </section>
+
+                <section
+                  class="cvSkillsSection"
+                  aria-labelledby="cvSkillsHeading"
+                >
+                  <h3 id="cvSkillsHeading" class="cvSectionTitle">Skills</h3>
+
+                  <div class="skillsGrade">
+                    <div class="gradeScale">
+                      <h4 class="gradeName">HTML | CSS | Tailwind</h4>
+                      <div
+                        class="gradeLevel level2"
+                        role="progressbar"
+                        aria-label="HTML, CSS och Tailwind"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">JavaScript | Typescript</h4>
+                      <div
+                        class="gradeLevel level2"
+                        role="progressbar"
+                        aria-label="HTML, CSS och Tailwind"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">SEO</h4>
+                      <div
+                        class="gradeLevel level3"
+                        role="progressbar"
+                        aria-label="SEO"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">Git | GitHub</h4>
+                      <div
+                        class="gradeLevel level4"
+                        role="progressbar"
+                        aria-label="Git och GitHub"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">UX | UI</h4>
+                      <div
+                        class="gradeLevel level5"
+                        role="progressbar"
+                        aria-label="UX och UI"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">Branding</h4>
+                      <div
+                        class="gradeLevel level6"
+                        role="progressbar"
+                        aria-label="Branding och grafiska profiler"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">Adobe CC</h4>
+                      <div
+                        class="gradeLevel level7"
+                        role="progressbar"
+                        aria-label="Adobe Creative Cloud"
+                        aria-valuenow="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+
+                      <h4 class="gradeName">Figma</h4>
+                      <div
+                        class="gradeLevel level1"
+                        role="progressbar"
+                        aria-label="Figma"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

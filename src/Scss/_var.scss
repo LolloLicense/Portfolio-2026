@@ -1,0 +1,86 @@
+//------------------------------------------------------------------->
+//---------------------------- Typography --------------------------->
+//------------------------------------------------------------------->
+
+@font-face {
+  font-family: "Rammetto One";
+  src: url("/public/fonts/RammettoOne.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans.ttf") format("truetype");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Headings */
+
+$fs-h1: clamp(3rem, 10vw, 13.75rem);
+$fs-h2: clamp(1rem, 9vw, 5rem);
+$fs-h3: clamp(1.5rem, 4vw, 3rem);
+$fs-h4: clamp(1.25rem, 3vw, 2.25rem);
+$fs-h5: clamp(1.125rem, 2.2vw, 1.75rem);
+$fs-h6: clamp(1rem, 1.6vw, 1.375rem);
+/* Bodyf ont */
+$fs-body: 1rem;
+
+body {
+  font-size: $fs-body;
+  font-family: "Open Sans";
+}
+
+h1 {
+  font-size: $fs-h1;
+  font-family: "Rammetto One";
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: $fs-h2;
+  font-family: "Open Sans";
+  font-weight: 500;
+  margin: 0;
+}
+h3 {
+  font-size: $fs-h3;
+  font-family: "Open Sans";
+}
+h4 {
+  font-size: $fs-h4;
+  font-family: "Open Sans";
+}
+h5 {
+  font-size: $fs-h5;
+  font-family: "Open Sans";
+}
+h6 {
+  font-size: $fs-h6;
+  font-family: "Open Sans";
+}
+
+//------------------------------------------------------------------->
+//------------------------------ Colors ----------------------------->
+//------------------------------------------------------------------->
+
+/* Palette*/
+
+$clr-dark: #202221;
+$clr-light: #fffffe;
+$clr-orange: #f25832;
+$clr-blue: #207fe5;
+$clr-green: #44b460;
+
+:root {
+  /* palette light theme*/
+  --clr-dark: #{$clr-dark};
+  --clr-light: #{$clr-light};
+  --clr-orange: #{$clr-orange};
+  --clr-blue: #{$clr-blue};
+  --clr-green: #{$clr-green};
+}
