@@ -1,0 +1,227 @@
+@use "./var";
+@use "./mixins" as mix;
+//------------------------------------------------------------------->
+//------------------------ CV - dialog ------------------------------>
+//------------------------------------------------------------------->
+.cvDialog {
+  overscroll-behavior: contain;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var.$clr-light;
+  color: var.$clr-dark;
+  overflow: hidden;
+
+  .cvDialogInner {
+    overscroll-behavior: contain;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    overflow-y: auto;
+    padding: var.$sp-inline;
+  }
+
+  h3 {
+    font-family: "Rammetto one";
+    margin-top: 0;
+  }
+  section {
+    margin: var.$sp-inline 0 0 0;
+  }
+
+  .closeDialogBtn {
+    z-index: 10;
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    background: none !important;
+  }
+
+  .cvHeader,
+  .cvMainContent {
+    width: 100%;
+  }
+
+  .cvHeader {
+    display: flex;
+    flex-direction: column;
+    margin-block: var.$sp-inline;
+
+    .cvHeaderContent {
+      width: 100%;
+      max-width: 900px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .cvImage {
+        margin: 0;
+
+        img {
+          max-width: 400px;
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+      }
+
+      .cvIntro {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        h2 {
+          margin: 0;
+        }
+        p {
+          font-size: var.$fs-h6;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .cvMainContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+
+    p {
+      margin-top: 0.5rem;
+      padding: 0;
+    }
+    ul {
+      padding: 0;
+    }
+    .cvContentTitle {
+      margin-top: 1rem;
+      font-size: var.$fs-h5;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .workDates,
+    .educationDates {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var.$clr-grey;
+    }
+
+    .ctaBtns {
+      margin-top: var.$sp-inline;
+      display: flex;
+      gap: 1.5rem;
+      .contactButton {
+        @include mix.pill-button;
+      }
+      .gitBtn {
+        @include mix.outline-button;
+        a {
+          text-decoration: none;
+          font-size: var.$fs-h6;
+          font-weight: 600;
+          line-height: 1;
+        }
+      }
+    }
+
+    .cvContentLeft,
+    .cvContentRight {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .aboutText {
+      max-width: 300px;
+    }
+    .cvContentRight {
+      .educationSection h4 {
+        margin-top: 0.5rem;
+        font-size: var.$fs-h5;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .cvSkillsSection {
+        display: block;
+        .cvSectionTitle {
+          margin-block: 1rem;
+        }
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------->
+//------------------------------ CV RESPONSIVE ---------------------->
+//------------------------------------------------------------------->
+
+@media screen and (max-width: 900px) {
+  .cvDialog {
+    section {
+      margin: 1.25rem 0 0 0;
+    }
+    .cvHeader {
+      .cvHeaderContent {
+        gap: 0.5rem;
+      }
+    }
+    .cvMainContent {
+      grid-template-columns: 1fr;
+    }
+    .cvDialogInner {
+      padding: 1.25rem;
+    }
+
+    .cvContentLeft,
+    .cvContentRight {
+      max-width: 100%;
+    }
+
+    .workCards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cvDialog {
+    .closeDialogBtn {
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .cvHeader {
+      margin-block: 1.5rem;
+
+      .cvImage img {
+        max-width: 200px;
+      }
+      p {
+        font-size: 0.65rem;
+      }
+    }
+
+    .cvMainContent {
+      gap: 1.5rem;
+    }
+  }
+}

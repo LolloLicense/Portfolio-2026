@@ -1,0 +1,80 @@
+@use "./var";
+//------------------------------------------------------------------->
+//------------------------------ CASE ------------------------------->
+//------------------------------------------------------------------->
+
+.caseSection {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  h3 {
+    margin: 0.5rem 0 0.2rem 0;
+    text-transform: uppercase;
+    font-size: var.$fs-h6;
+    font-weight: 700;
+  }
+  p {
+    margin: 0;
+    color: var.$clr-grey;
+  }
+  .caseDesc {
+    display: flex;
+    justify-content: space-between;
+
+    .year {
+      color: var.$clr-dark;
+      font-weight: 500;
+    }
+  }
+
+  .caseImageWrap {
+    position: relative;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.35s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgb(0 0 0 / 0.3);
+      transition: background 0.25s ease;
+      pointer-events: none;
+    }
+    &:hover img {
+      transform: scale(1.04);
+    }
+    &:hover::after {
+      background: rgb(0 0 0 / 0);
+    }
+  }
+
+  .caseSwiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: var.$clr-orange;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+    .swiper-button-next {
+      right: var(--swiper-navigation-sides-offset, -1px);
+      left: auto;
+    }
+    .swiper-button-prev {
+      left: var(--swiper-navigation-sides-offset, -1px);
+      right: auto;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .caseSection {
+    display: block;
+  }
+}

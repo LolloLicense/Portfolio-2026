@@ -1,0 +1,130 @@
+@use "./var";
+@use "./mixins" as mix;
+
+.bingoSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .bingoWrap {
+    position: relative;
+    width: 100%;
+
+    &.hasBingo {
+      .bingoBoard {
+        opacity: 0.1;
+      }
+
+      .bingoWinMsg {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .bingoBoard {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    transition: opacity 0.3s ease;
+  }
+
+  .bingoWinMsg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .bingoWinMsg[hidden] {
+    display: none !important;
+  }
+
+  .bingoWinText {
+    margin: 0;
+    max-width: 20rem;
+    font-size: var.$fs-h3;
+    line-height: 1.2;
+    font-family: "Rammetto one";
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var.$clr-green;
+    text-wrap: balance;
+  }
+  .bingoWinActions {
+    display: flex;
+    gap: 1rem;
+    .contactBtn {
+      @include mix.pill-button;
+    }
+    .playAgainBtn {
+      @include mix.outline-button;
+    }
+  }
+
+  .bingoCell {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: var.$fs-body;
+    line-height: 1;
+    text-align: center;
+    text-wrap: balance;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease, transform 0.2s ease;
+    background-color: var.$clr-light;
+    color: var.$clr-dark;
+    border: 4px solid var.$clr-dark;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.is-selected {
+      border-color: var.$clr-green;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bingoSection {
+    .bingoWrap {
+      .bingoBoard {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bingoSection {
+    display: block;
+
+    .bingoWrap {
+      .bingoBoard {
+        gap: 0.3rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        .bingoCell {
+          min-height: 90px;
+          padding: 0.3rem;
+        }
+      }
+    }
+  }
+}

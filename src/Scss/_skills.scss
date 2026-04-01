@@ -1,0 +1,81 @@
+@use "./var";
+
+//------------------------------------------------------------------->
+//------------------------------ SKILLS ----------------------------->
+//------------------------------------------------------------------->
+
+.skillsSection {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+
+  .gradeName {
+    font-size: var.$fs-body;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    text-transform: none;
+  }
+
+  .gradeName:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  .skillsGrade {
+    flex: 1;
+    margin: 0;
+  }
+
+  .gradeLevel {
+    position: relative;
+    height: clamp(1.125rem, 1vw + 0.5rem, 1.5rem);
+    background-color: #d9d9d9;
+    border-radius: 10px;
+  }
+
+  .gradeLevel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 0;
+    background-color: var.$clr-green;
+    z-index: 77;
+    border-radius: inherit;
+  }
+
+  .level1::before {
+    width: 95%;
+  }
+
+  .level2::before {
+    width: 70%;
+  }
+
+  .level3::before {
+    width: 80%;
+  }
+
+  .level4::before {
+    width: 70%;
+  }
+
+  .level5::before {
+    width: 75%;
+  }
+
+  .level6::before {
+    width: 75%;
+  }
+
+  .level7::before {
+    width: 75%;
+  }
+  .level8::before {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skillsSection {
+    display: block;
+  }
+}
