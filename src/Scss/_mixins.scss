@@ -1,0 +1,43 @@
+@use "./var";
+
+@mixin pill-button(
+  $bg: var.$clr-dark,
+  $color: var.$clr-light,
+  $border: var.$clr-dark,
+  $hover-bg: transparent,
+  $hover-color: var.$clr-dark,
+  $hover-border-color: var.$clr-orange
+) {
+  background-color: $bg;
+  color: $color;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  line-height: 1;
+  font-size: var.$fs-h6;
+  font-family: "Open Sans";
+  border: 2px solid $border;
+  box-shadow: 0 8px 20px rgb(32 34 33 / 0.16);
+
+  &:hover {
+    background-color: $hover-bg;
+    color: $hover-color;
+    border: 2px solid $hover-border-color;
+  }
+}
+
+@mixin outline-button(
+  $border-color: var.$clr-dark,
+  $hover-border-color: var.$clr-orange
+) {
+  background-color: transparent;
+  border: 2px solid $border-color;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 8px 20px rgb(32 34 33 / 0.16);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border: 2px solid $hover-border-color;
+  }
+}
