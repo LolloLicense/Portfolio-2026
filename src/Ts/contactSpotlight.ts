@@ -33,7 +33,7 @@ export function initContactSpotlight(): void {
 		return;
 	}
 
-	contactMenuLink.addEventListener("click", (event: MouseEvent) => {
+	contactMenuLink.addEventListener("click", () => {
 		socialSidebar.classList.remove("is-spotlighted");
 		// Forces a reflow so the browser resets the animation state
 		void socialSidebar.offsetWidth;
