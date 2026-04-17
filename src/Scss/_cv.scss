@@ -127,15 +127,14 @@
       gap: 1.5rem;
       .contactButton {
         @include mix.pill-button;
+        text-decoration: none;
       }
       .gitBtn {
         @include mix.outline-button;
-        a {
-          text-decoration: none;
-          font-size: var.$fs-h6;
-          font-weight: 600;
-          line-height: 1;
-        }
+        text-decoration: none;
+        font-size: var.$fs-body;
+        font-weight: 600;
+        color: var.$clr-dark;
       }
     }
 
@@ -148,7 +147,7 @@
     }
 
     .aboutText {
-      max-width: 300px;
+      max-width: 405px;
     }
     .cvContentRight {
       .educationSection h4 {

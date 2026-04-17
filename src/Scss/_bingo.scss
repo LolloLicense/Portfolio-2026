@@ -68,9 +68,12 @@
     gap: 1rem;
     .contactBtn {
       @include mix.pill-button;
+      text-decoration: none;
     }
     .playAgainBtn {
       @include mix.outline-button;
+      font-weight: 600;
+      cursor: pointer;
     }
   }
 

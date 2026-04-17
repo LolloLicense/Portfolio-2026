@@ -9,42 +9,19 @@
   <body>
     <div class="pageShell">
       <!-- Sidebar -->
-      <aside class="socialSidebar" aria-label="Kontaktlänkar">
+      <aside
+        class="socialSidebar"
+        id="socialSidebar"
+        aria-label="Kontaktlänkar"
+      >
         <nav class="socialNav" aria-label="Sociala länkar">
           <ul class="socialList">
-            <li class="socialItem socialItemMenu">
-              <button
-                id="menuButton"
-                class="menuButton"
-                type="button"
-                aria-label="Öppna meny"
-                aria-expanded="false"
-                aria-controls="siteMenu"
-              >
-                <svg
-                  width="25"
-                  height="19"
-                  viewBox="0 0 27 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    d="M1 1H26M1 9.5H26M1 18H26"
-                    stroke="#FFFFFE"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
-            </li>
-
             <li class="socialItem">
               <a
                 href="mailto:louise.sverkstrom@gmail.com"
                 class="socialLink"
                 aria-label="Skicka e-post till Louise Sverkström"
+                rel="noopener noreferrer"
               >
                 <svg
                   width="27"
@@ -136,7 +113,9 @@
                 <a href="#bingoSection" class="menuLink">Bingo</a>
               </li>
               <li class="menuItem">
-                <a href="#contactSection" class="menuLink">Kontakt</a>
+                <a href="#socialSidebar" class="menuLink" id="contactMenuLink"
+                  >Kontakt</a
+                >
               </li>
             </ul>
           </nav>
@@ -192,6 +171,8 @@
                   <div class="caseImageWrap">
                     <a
                       href="https://lollolicense.github.io/Lo-s-Donut-Dispensary/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         src="/images/case-1.jpg"
@@ -213,6 +194,8 @@
                   <div class="caseImageWrap">
                     <a
                       href="https://lollolicense.github.io/The-Temple-of-Five/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <img
                         src="/images/case-2.jpg"
@@ -231,7 +214,11 @@
                 <!-- Case 3 -->
                 <div class="swiper-slide">
                   <div class="caseImageWrap">
-                    <a href="https://lollolicense.github.io/Ikapp/">
+                    <a
+                      href="https://lollolicense.github.io/Ikapp/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/images/case-3.jpg"
                         alt="Projektbild för appen Ikapp"
@@ -249,7 +236,11 @@
                 <!-- Case 4 -->
                 <div class="swiper-slide">
                   <div class="caseImageWrap">
-                    <a href="https://lollolicense.github.io/Folded/">
+                    <a
+                      href="https://lollolicense.github.io/Folded/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/images/case-4.jpg"
                         alt="Projektbild för Folded"
@@ -268,7 +259,11 @@
                 <!-- Case 5 -->
                 <div class="swiper-slide">
                   <div class="caseImageWrap">
-                    <a href="https://lollolicense.github.io/Smile-Wave/">
+                    <a
+                      href="https://lollolicense.github.io/Smile-Wave/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         src="/images/case-5.jpg"
                         alt="Projektbild för Folded"
@@ -398,9 +393,12 @@
                   <button type="button" class="playAgainBtn" id="playAgainBtn">
                     Spela igen
                   </button>
-                  <button type="button" class="contactBtn" id="bingoContactBtn">
+                  <a
+                    href="mailto:louise.sverkstrom@gmail.com"
+                    class="button contactBtn"
+                  >
                     Kontakta mig
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -408,7 +406,7 @@
         </main>
 
         <!-- Footer -->
-        <footer id="contactSection" class="siteFooter">
+        <footer class="siteFooter">
           <p class="copyright">
             © 2026 Louise Sverkström — skapad med kaffe, kod och kreativitet.
           </p>
@@ -531,16 +529,22 @@
                   Referenser? Självklart — kontakta mig så skickar jag.
                 </p>
                 <div class="ctaBtns">
-                  <button
-                    type="button"
+                  <a
+                    href="mailto:louise.sverkstrom@gmail.com"
                     id="contactButton"
                     class="button contactButton"
                   >
                     Kontakta mig
-                  </button>
-                  <button type="button" class="button gitBtn">
-                    <a href="#">Min Github</a>
-                  </button>
+                  </a>
+
+                  <a
+                    href="https://github.com/LolloLicense"
+                    class="button gitBtn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Min GitHub
+                  </a>
                 </div>
               </section>
             </div>
