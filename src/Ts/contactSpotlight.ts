@@ -33,16 +33,17 @@ export function initContactSpotlight(): void {
 		return;
 	}
 
-	contactMenuLink.addEventListener("click", () => {
+	contactMenuLink.addEventListener("click", (event: MouseEvent) => {
+		event.preventDefault();
+
 		socialSidebar.classList.remove("is-spotlighted");
-		// Forces a reflow so the browser resets the animation state
 		void socialSidebar.offsetWidth;
 		socialSidebar.classList.add("is-spotlighted");
 
-		// Clears the old timeout if the user clicks again before 5 seconds have passed
 		if (spotlightTimeout) {
 			window.clearTimeout(spotlightTimeout);
 		}
+
 		spotlightTimeout = window.setTimeout(() => {
 			socialSidebar.classList.remove("is-spotlighted");
 		}, 2000);
