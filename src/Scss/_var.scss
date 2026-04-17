@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: "Rammetto One";
-  src: url("/fonts/RammettoOne.ttf");
+  src: url("../assets/fonts/RammettoOne.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans.ttf") format("truetype");
+  src: url("../assets/fonts/OpenSans.ttf") format("truetype");
   font-weight: 300 800;
   font-stretch: 75% 100%;
   font-style: normal;
@@ -91,3 +91,4 @@ $clr-green: #44b460;
 
 $sp-section: 6rem;
 $sp-inline: 2.5rem;
+$sp-inline-small: 2rem;
