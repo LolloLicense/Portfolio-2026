@@ -3,7 +3,7 @@ const bingoItems: string[] = [
 	"Starka känslor för typografi",
 	"Spacing ska absolut petas i",
 	"TODO-listor är dunder",
-	"Bekant & fräscht",
+	"Auto layout räddar liv",
 	"2px off känns i själen",
 	"Kan inte släppa en halvbra hover",
 	"Alt-texter ska också ha kärlek",
