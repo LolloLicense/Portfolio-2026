@@ -42,8 +42,11 @@ section {
     transition: transform 0.25s ease-in-out, background-color 0.3s ease-in-out;
   }
 
-  .socialLink:hover svg {
-    transform: scale(1.02);
+  .socialLink {
+    color: var.$clr-light;
+    &:hover {
+      color: var.$clr-orange;
+    }
   }
 
   &.is-spotlighted {

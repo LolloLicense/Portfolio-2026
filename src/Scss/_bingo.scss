@@ -73,7 +73,7 @@
     .playAgainBtn {
       @include mix.outline-button;
       font-weight: 600;
-      cursor: pointer;
+      // cursor: pointer;
       color: var.$clr-dark;
     }
   }
@@ -97,7 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    // cursor: pointer;
 
     &.is-selected {
       border-color: var.$clr-green;
