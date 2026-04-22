@@ -16,14 +16,14 @@
   }
   p {
     margin: 0;
-    color: var.$clr-grey;
+    color: var(--clr-grey);
   }
   .caseDesc {
     display: flex;
     justify-content: space-between;
 
     .year {
-      color: var.$clr-dark;
+      color: var(--clr-grey);
       font-weight: 500;
     }
   }

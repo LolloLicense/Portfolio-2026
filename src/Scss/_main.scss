@@ -5,8 +5,8 @@
 //------------------------------------------------------------------->
 body {
   margin-inline: var.$sp-inline;
-  color: var.$clr-dark;
-  background-color: var.$clr-light;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
 }
 
 .sectionTitle {
@@ -28,33 +28,86 @@ section {
   align-items: flex-start;
   position: fixed;
   top: 20%;
-  z-index: 1001;
   left: 0;
+  z-index: 1001;
+
+  .socialNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--clr-dark);
+    padding: 1rem 0.8rem;
+    border-radius: 0 10px 10px 0;
+  }
 
   .socialList {
     list-style: none;
-    background-color: var.$clr-dark;
-    padding: 1rem 0.7rem;
-    border-radius: 0 10px 10px 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
     transition: transform 0.25s ease-in-out, background-color 0.3s ease-in-out;
   }
 
+  .socialItem {
+    display: flex;
+    justify-content: center;
+  }
+
   .socialLink {
-    color: var.$clr-light;
-    &:hover {
-      color: var.$clr-orange;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-light);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-orange);
+    }
+  }
+
+  .themeToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--clr-light);
+    transition: color 0.25s ease, transform 0.25s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-orange);
+      transform: translateY(-2px);
     }
   }
 
   &.is-spotlighted {
-    .socialList {
-      background-color: var.$clr-orange;
+    .socialNav {
+      background-color: var(--clr-orange);
       animation: sidebarPulse 1.1s ease-in-out infinite;
     }
   }
+}
+
+.themeIconSun {
+  display: none;
+}
+
+.themeIconMoon {
+  display: inline-flex;
+}
+
+html[data-theme="dark"] .themeIconMoon {
+  display: none;
+}
+
+html[data-theme="dark"] .themeIconSun {
+  display: inline-flex;
 }
 
 @keyframes sidebarPulse {
@@ -87,7 +140,7 @@ section {
 
   .menuItem a {
     text-decoration: none;
-    color: var.$clr-dark;
+    color: var(--clr-dark);
     font-size: var.$fs-body;
     font-weight: 800;
     &:hover {
@@ -139,7 +192,7 @@ section {
       width: clamp(2rem, 8vw, 5.6875rem);
       height: auto;
       path {
-        fill: var.$clr-dark;
+        fill: var(--clr-dark);
       }
     }
 
@@ -148,7 +201,7 @@ section {
     }
 
     &:focus-visible {
-      outline: 2px solid var.$clr-dark;
+      outline: 2px solid var(--clr-dark);
       outline-offset: 4px;
       border-radius: 10px;
     }
@@ -161,7 +214,7 @@ section {
   align-items: center;
   .copyright {
     margin-block: 2rem;
-    color: var.$clr-grey;
+    color: var(--clr-grey);
     text-align: center;
   }
 }

@@ -85,6 +85,15 @@ $clr-green: #44b460;
   --clr-green: #{$clr-green};
 }
 
+html[data-theme="dark"] {
+  --clr-dark: #{$clr-light};
+  --clr-light: #{$clr-dark};
+  --clr-grey: #d2d8d5;
+  --clr-orange: #{$clr-orange};
+  --clr-blue: #{$clr-blue};
+  --clr-green: #{$clr-green};
+}
+
 //------------------------------------------------------------------->
 //----------------------------- Spacing ----------------------------->
 //------------------------------------------------------------------->

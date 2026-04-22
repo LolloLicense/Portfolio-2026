@@ -14,8 +14,8 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: var.$clr-light;
-  color: var.$clr-dark;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
   overflow: hidden;
 
   .cvDialogInner {
@@ -46,6 +46,7 @@
     border: none;
     cursor: pointer;
     background: none !important;
+    color: var(--clr-dark);
   }
 
   .cvHeader,
@@ -134,7 +135,7 @@
         text-decoration: none;
         font-size: var.$fs-body;
         font-weight: 600;
-        color: var.$clr-dark;
+        color: var(--clr-dark);
       }
     }
 

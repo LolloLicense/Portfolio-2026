@@ -1,12 +1,12 @@
 @use "./var";
 
 @mixin pill-button(
-  $bg: var.$clr-dark,
-  $color: var.$clr-light,
-  $border: var.$clr-dark,
+  $bg: var(--clr-dark),
+  $color: var(--clr-light),
+  $border: var(--clr-dark),
   $hover-bg: transparent,
-  $hover-color: var.$clr-dark,
-  $hover-border-color: var.$clr-orange
+  $hover-color: var(--clr-dark),
+  $hover-border-color: var(--clr-orange)
 ) {
   background-color: $bg;
   color: $color;
@@ -26,8 +26,8 @@
 }
 
 @mixin outline-button(
-  $border-color: var.$clr-dark,
-  $hover-border-color: var.$clr-orange
+  $border-color: var(--clr-dark),
+  $hover-border-color: var(--clr-orange)
 ) {
   background-color: transparent;
   border: 2px solid $border-color;
